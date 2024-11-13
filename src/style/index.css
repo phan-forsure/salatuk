@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply bg-neutral-800;
+  }
+}
+@layer components {
+  .comp {
+    @apply my-5 py-8 px-32 bg-neutral-700 md:px-12 max-sm:px-8;
+  }
+}
+@layer base {
+  section.input-data input[type="text"] {
+    @apply border-b-2 border-neutral-500 border-solid p-5 outline-none w-full my-2 bg-transparent *:bg-neutral-700 transition-all opacity-75 hover:opacity-100;
+  }
+}
+@layer base {
+  section.output-data div.data p {
+    @apply p-5 my-3 bg-neutral-600 rounded w-full flex justify-between items-center;
+  }
+} /*# sourceMappingURL=app.css.map */
+
+body::-webkit-scrollbar {
+  display: none;
+}
