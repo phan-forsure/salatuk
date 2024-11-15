@@ -1,8 +1,8 @@
 {
-  "name": "my-new-app",
-  "productName": "my-new-app",
+  "name": "Salatuk",
+  "productName": "Salatuk",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Salatuk is an Electron application that displays muslim prayer times",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
@@ -25,6 +25,7 @@
     "@electron/fuses": "^1.8.0",
     "@vercel/webpack-asset-relocator-loader": "^1.7.3",
     "babel-loader": "^9.2.1",
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^6.11.0",
     "electron": "33.2.0",
     "node-loader": "^2.1.0",
@@ -34,7 +35,9 @@
   "keywords": [],
   "license": "MIT",
   "dependencies": {
+    "@tanstack/query-sync-storage-persister": "^5.60.4",
     "@tanstack/react-query": "^5.59.20",
+    "@tanstack/react-query-persist-client": "^5.60.4",
     "electron-squirrel-startup": "^1.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

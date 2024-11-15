@@ -1,24 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   body {
     @apply bg-neutral-800;
+    height: 95vh;
+    font-family: "Cairo", sans-serif;
+  }
+  #root {
+    height: 100%;
+  }
+  .app {
+    grid-template-areas: "clock fetch" "calendar data" "calendar data";
+  }
+  .calendar {
+    grid-area: calendar;
+  }
+  .clock {
+    grid-area: clock;
+  }
+  .today {
+    @apply border-b-2 border-neutral-400
   }
 }
+
 @layer components {
   .comp {
-    @apply my-5 py-8 px-32 bg-neutral-700 md:px-12 max-sm:px-8;
+    @apply m-2 py-8 px-32 bg-neutral-700 md:px-12 max-sm:px-8;
   }
 }
 @layer base {
   section.input-data input[type="text"] {
     @apply border-b-2 border-neutral-500 border-solid p-5 outline-none w-full my-2 bg-transparent *:bg-neutral-700 transition-all opacity-75 hover:opacity-100;
   }
+  section.input-data {
+    grid-area: fetch;
+  }
 }
 @layer base {
   section.output-data div.data p {
     @apply p-5 my-3 bg-neutral-600 rounded w-full flex justify-between items-center;
+  }
+  section.output-data {
+    grid-area: data;
+  }
+  section.output-data::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  section.output-data::-webkit-scrollbar-thumb {
+    @apply bg-neutral-600;
+  }
+
+  section.output-data::-webkit-scrollbar-track {
+    @apply bg-neutral-800;
   }
 } /*# sourceMappingURL=app.css.map */
 
